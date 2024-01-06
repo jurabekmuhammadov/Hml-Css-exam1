@@ -1,0 +1,95 @@
+html {
+  scroll-behavior: smooth;
+}
+footer {
+  background-color: #16697a;
+  padding: 50px 0 87px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-ul h5 {
+  margin-bottom: 20px;
+  font-family: Montserrat-bold;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+  color: #ffffff;
+}
+.footer li {
+  margin: 10px 0;
+}
+.footer-ul a {
+  position: relative;
+  font-family: Montserrat-semibold;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  color: #bababa;
+}
+.footer-ul a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1.5px;
+  border-radius: 4px;
+  background-color: white;
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+.footer-ul a:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+.footer-ul a:hover {
+  color: white;
+}
+
+.footer-ul svg {
+  margin-right: 5px;
+}
+.end {
+  padding: 25px 20px;
+  background-color: #fafafa;
+  display: flex;
+  justify-content: space-between;
+}
+
+.end-left h3 {
+  font-family: Montserrat-semibold;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  color: var(--content-color);
+}
+.end-right a {
+    margin: 0 10px;
+}
+@media(max-width:1050px) {
+    .footer {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 50px;
+    }
+}
+@media (max-width:680px) {
+    .end {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+}
+@media (max-width:600px) {
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}

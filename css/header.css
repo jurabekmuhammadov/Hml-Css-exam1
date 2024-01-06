@@ -1,0 +1,251 @@
+html {
+  scroll-behavior: smooth;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: #fafafa;
+  padding: 30px 0;
+  transition: 0.7s;
+}
+
+/* --- Navbar start --- */
+
+.navbar-shrink {
+  padding: 20px 0;
+  background-color: #cccccc;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.indicorp {
+  font-family: Montserrat-bold;
+  font-size: 1.625em;
+  line-height: 32px;
+  letter-spacing: 0.1px;
+  color: var(--heading-color);
+}
+
+.nav-right-ul {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.nav-links {
+  position: relative;
+  font-family: Montserrat-semibold;
+  font-size: 1em;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.2px;
+  color: var(--content-color);
+  transition: 0.5;
+}
+
+.nav-links::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1.9px;
+  border-radius: 4px;
+  background-color: var(--heading-color);
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-links:hover {
+  color: var(--heading-color);
+}
+
+.nav-links:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+/* --- Dropdown start --- */
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content-home {
+  display: none;
+  position: absolute;
+  top: 100%;
+  width: 145px;
+  background: #e7e5e5;
+  border-radius: 20px;
+  border-top-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.dropdown-content-about {
+  display: none;
+  position: absolute;
+  top: 100%;
+  width: 152px;
+  background: #e7e5e5;
+  border-radius: 20px;
+  border-top-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.dropdown-content-advice {
+  display: none;
+  position: absolute;
+  top: 100%;
+  width: 170px;
+  background: #e7e5e5;
+  border-radius: 20px;
+  border-top-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.dropdown-content-services {
+  display: none;
+  position: absolute;
+  top: 100%;
+  width: 180px;
+  background: #e7e5e5;
+  border-radius: 20px;
+  border-top-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.dropdown-content-contact {
+  display: none;
+  position: absolute;
+  top: 100%;
+  width: 145px;
+  background: #e7e5e5;
+  border-radius: 20px;
+  border-top-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.dropdown-li {
+  display: block;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.dropdown-links {
+  position: relative;
+  font-family: Montserrat-medium;
+  font-size: 0.9em;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.2px;
+  color: var(--content-color);
+  transition: 0.5;
+}
+
+.dropdown-links::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1.5px;
+  border-radius: 4px;
+  background-color: var(--heading-color);
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.dropdown-links:hover {
+  color: var(--heading-color);
+}
+
+.dropdown-links:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+.nav-items:hover .dropdown-content-home {
+  display: block;
+}
+
+.nav-items:hover .dropdown-content-about {
+  display: block;
+}
+
+.nav-items:hover .dropdown-content-advice {
+  display: block;
+}
+
+.nav-items:hover .dropdown-content-services {
+  display: block;
+}
+
+.nav-items:hover .dropdown-content-contact {
+  display: block;
+}
+.hamburger, .close {
+  display: none;
+}
+
+/* --- Responsive --- */
+
+@media (max-width: 750px) {
+  .hamburger,
+  .close {
+    display: block;
+  }
+  .nav-right-ul {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    gap: 80px;
+    background: #cccccc;
+    transition: 1s;
+  }
+  .dropdown-content-about,
+  .dropdown-content-advice,
+  .dropdown-content-contact,
+  .dropdown-content-home,
+  .dropdown-content-services {
+    opacity: 0;
+  }
+  .nav-links {
+    color: var(--heading-color);
+    font-size: 2.2em;
+  }
+  .nav-links::before {
+    height: 3px;
+    background-color: rgb(128, 128, 128);
+  }
+  .close {
+    position: absolute;
+    bottom: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  .close img {
+    width: 40px;
+  }
+  .hamburger {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+  }
+  .hamburger img {
+    width: 35px;
+  }
+}

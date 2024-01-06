@@ -1,0 +1,80 @@
+html {
+  scroll-behavior: smooth;
+}
+#about {
+  padding: 300px 0 80px;
+  background-color: #fafafa;
+}
+.about-heading {
+  text-align: center;
+}
+.about-heading h1 {
+  font-family: Montserrat-bold;
+  font-size: 2.5em;
+  line-height: 57px;
+  letter-spacing: 0.2px;
+  color: var(--heading-color);
+}
+
+.about-heading p {
+  margin-top: 10px;
+  font-family: Montserrat-medium;
+  font-size: 0.875em;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  color: var(--content-color);
+}
+
+.about-card-block {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 230px;
+  padding: 30px 0;
+  background: #ffffff;
+}
+
+.about-cards h2 {
+  margin: 10px 0;
+  font-family: Montserrat-bold;
+  font-size: 40px;
+  line-height: 57px;
+  letter-spacing: 0.2px;
+  color: var(--heading-color);
+}
+.about-cards h3 {
+  font-family: Montserrat-bold;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.1px;
+  color: var(--content-color);
+}
+
+.about-cards:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 1040px) {
+    #about {
+        padding: 100px 0 130px;
+    }
+  .about-heading {
+    width: 100%;
+  }
+  .about-card-block {
+    margin-top: 80px;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+  }
+}
